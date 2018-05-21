@@ -1,26 +1,17 @@
-QT       += webkit
-
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets webkitwidgets
+QT += webkit webkitwidgets widgets
 
 TARGET = qt-oauth-lib
 TEMPLATE = lib
-CONFIG += staticlib
 
-SOURCES += oauth2.cpp \
-    logindialog.cpp
+SOURCES += oauth2.cpp logindialog.cpp
+HEADERS += oauth2.h logindialog.h
+FORMS += logindialog.ui
 
-HEADERS += oauth2.h \
-    logindialog.h
-unix:!symbian {
-    maemo5 {
-        target.path = /opt/usr/lib
-    } else {
-        target.path = /usr/lib
-    }
-    INSTALLS += target
+headers.files = $$HEADERS
+
+unix {
+  headers.path = $$PREFIX/include
+  target.path = $$PREFIX/lib
+
+  INSTALLS += headers target
 }
-
-FORMS += \
-    logindialog.ui
-
-
