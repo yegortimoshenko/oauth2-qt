@@ -6,29 +6,27 @@
 #include <QUrl>
 
 namespace Ui {
-    class LoginDialog;
+class LoginDialog;
 }
 
-class LoginDialog : public QDialog
-{
-    Q_OBJECT
+class LoginDialog : public QDialog {
+  Q_OBJECT
 
 public:
-    explicit LoginDialog(QWidget *parent = 0);
-    ~LoginDialog();
-    void setLoginUrl(const QString& url);
-    QString accessToken();
+  explicit LoginDialog(QWidget *parent = 0);
+  ~LoginDialog();
+  void setLoginUrl(const QString &url);
+  QString accessToken();
 
 signals:
-    void accessTokenObtained();
+  void accessTokenObtained();
 
 private slots:
-    void urlChanged(const QUrl& url);
-
+  void urlChanged(const QUrl &url);
 
 private:
-    Ui::LoginDialog *ui;
-    QString m_strAccessToken;
+  Ui::LoginDialog *ui;
+  QString m_strAccessToken;
 };
 
 #endif // LOGINDIALOG_H
