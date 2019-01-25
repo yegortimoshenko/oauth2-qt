@@ -1,4 +1,4 @@
-QT += webkit webkitwidgets widgets
+QT += webengine webenginewidgets widgets
 
 TARGET = qt-oauth-lib
 TEMPLATE = lib
@@ -16,7 +16,7 @@ unix {
   CONFIG += create_pc create_prl
 
   QMAKE_PKGCONFIG_NAME = $$TARGET
-  QMAKE_PKGCONFIG_DESCRIPTION = Cleaned up Qt5 OAuth 2.0 library
+  QMAKE_PKGCONFIG_DESCRIPTION = OAuth 2.0 library for Qt 5
   QMAKE_PKGCONFIG_PREFIX = $$PREFIX
   QMAKE_PKGCONFIG_LIBDIR = $$target.path
   QMAKE_PKGCONFIG_INCDIR = $$headers.path
