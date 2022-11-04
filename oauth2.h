@@ -1,5 +1,4 @@
-#ifndef OAUTH2_H
-#define OAUTH2_H
+#pragma once
 
 #include <QObject>
 #include <QString>
@@ -46,5 +45,3 @@ private:
   LoginDialog *m_pLoginDialog;
   QWidget *m_pParent;
 };
-
-#endif // OAUTH2_H

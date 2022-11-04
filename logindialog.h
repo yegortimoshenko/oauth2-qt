@@ -1,5 +1,4 @@
-#ifndef LOGINDIALOG_H
-#define LOGINDIALOG_H
+#pragma once
 
 #include <QDialog>
 #include <QString>
@@ -28,5 +27,3 @@ private:
   Ui::LoginDialog *ui;
   QString m_strAccessToken;
 };
-
-#endif // LOGINDIALOG_H
