@@ -1,0 +1,9 @@
+*.o
+*.prl
+*.so
+*.so.*
+.qmake.stash
+Makefile
+moc_*
+pkgconfig
+ui_*
